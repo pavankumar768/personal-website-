@@ -13,7 +13,11 @@ pages = ["About Me", "Education", "Skills", "Projects", "Certifications", "Resum
 choice = st.sidebar.radio("Go to", pages)
 
 # Profile Section (Common Header)
-st.image("img.jpg", width=180)  # <-- replace with your actual photo
+try:
+    st.image("profile.jpg", width=180)
+except:
+    st.warning("Profile photo not found. Please upload 'profile.jpg'.")
+  # <-- replace with your actual photo
 st.title("👨‍💻 Keti Pavan Kumar")
 st.markdown("**Computer Science Student | Artificial Intelligence & Machine Learning Enthusiast**")
 st.markdown("📍 Medchal, Hyderabad 500010 | 📧 [umarpavan768@gmail.com](mailto:umarpavan768@gmail.com) | 📞 +91 7569343025")
